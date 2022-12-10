@@ -1,0 +1,35 @@
+\usepackage{amsthm}
+
+
+\newcounter{counterEnvMain}
+\newcounter{counterEnvDefault}
+\numberwithin{counterEnvDefault}{section}
+
+
+% ====================
+\theoremstyle{plain}
+
+\newtheorem{mainlemma}[counterEnvMain]{Lemma}
+\newtheorem{lemma}[counterEnvDefault]{Lemma}
+\newtheorem*{lemma*}{Lemma}
+
+\newtheorem{maintheorem}[counterEnvMain]{Theorem}
+\newtheorem{theorem}[counterEnvDefault]{Theorem}
+
+\newtheorem{proposition}[counterEnvDefault]{Proposition}
+\newtheorem{corollary}[counterEnvDefault]{Corollary}
+
+
+% ====================
+\theoremstyle{definition}
+
+\newtheorem{definition}[counterEnvDefault]{Definition}
+\newtheorem*{definition*}{Definition}
+
+\newtheorem{remark}[counterEnvDefault]{Remark}
+
+\newtheorem*{claim*}{Claim}
+
+\newtheorem*{assertion*}{Assertion}
+
+\newtheorem*{proposition*}{Proposition}

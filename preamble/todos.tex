@@ -1,0 +1,21 @@
+\usepackage{xargs}
+\usepackage[colorinlistoftodos,prependcaption,textsize=tiny]{todonotes}
+
+\newcommandx\work[2][1=]{\todo[linecolor=RoyalBlue,backgroundcolor=RoyalBlue!25,bordercolor=RoyalBlue,#1]{\textsc{todo} #2}}
+\newcommandx\comment[2][1=]{\todo[linecolor=OliveGreen,backgroundcolor=OliveGreen!25,bordercolor=OliveGreen,#1]{\textsc{comment} #2}}
+\newcommandx\mistake[2][1=]{\todo[linecolor=red,backgroundcolor=red!25,bordercolor=red,#1]{\textsc{mistake} #2}}
+\newcommandx\improve[2][1=]{\todo[linecolor=orange,backgroundcolor=orange!25,bordercolor=orange,#1]{\textsc{improve} #2}}
+\newcommandx\change[2][1=]{\todo[linecolor=yellow,backgroundcolor=yellow!25,bordercolor=yellow,#1]{\textsc{change} #2}}
+\newcommandx\mem[2][1=]{\todo[linecolor=orange,backgroundcolor=orange!25,bordercolor=orange,#1]{\textsc{mem} #2}}
+\newcommandx\status[2][1=]{\todo[linecolor=Blue,backgroundcolor=Blue!25,bordercolor=Blue,#1]{\textsc{Status} #2}}
+
+\newcommand\hidetodos{
+    \renewcommandx\todo[2][1=]{}
+    \renewcommandx\work[2][1=]{}
+    \renewcommandx\comment[2][1=]{}
+    \renewcommandx\mistake[2][1=]{}
+    \renewcommandx\improve[2][1=]{}
+    \renewcommandx\change[2][1=]{}
+    \renewcommandx\mem[2][1=]{}
+    \renewcommandx\status[2][1=]{}
+}
