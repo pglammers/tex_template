@@ -1,5 +1,5 @@
-\input{preamble/final}
-% \input{preamble/draft}
+% \input{preamble/final}
+\input{preamble/draft}
 \mathtoolsset{showonlyrefs}
 
 \makeatletter
@@ -26,6 +26,8 @@
     [keyword 2]
 }
 
+\newcommand\commentAuthorA[1]{\comment{AuthorA: #1}}
+\newcommand\commentAuthorB[1]{\comment{AuthorB: #1}}
 
 \begin{document}
 
@@ -37,9 +39,7 @@
     [Abstract text]
 \end{abstract}
 
-
-\comment{Test}
-$\Fz$
+\commentAuthorA{Test}
 
 \bibliographystyle{amsalpha}
 \bibliography{}
