@@ -33,14 +33,14 @@
 ]{biblatex}
 \addbibresource{My Library.bib}
 \AtEveryBibitem{%
-  \clearfield{url}%
-  \clearfield{urldate}%
-  \clearfield{urlday}%
-  \clearfield{urlmonth}%
-  \clearfield{urlyear}%
-  \clearfield{doi}%
-  \clearfield{isbn}%
-  \clearfield{issn}%
+    \clearfield{url}%
+    \clearfield{urldate}%
+    \clearfield{urlday}%
+    \clearfield{urlmonth}%
+    \clearfield{urlyear}%
+    \clearfield{doi}%
+    \clearfield{isbn}%
+    \clearfield{issn}%
 }
 
 % boxes
@@ -50,15 +50,12 @@
 \usepackage{preamble/todos}
 \setlength{\marginparwidth}{2.5cm}
 
-
-
 \makeatletter
 \@namedef{subjclassname@2020}{\textup{2020} Mathematics Subject Classification}
 \makeatother
 
 \title{[Title]}
 \subjclass[2020]{[Mathematics classification]}
-
 
 \author{[Name author1]}
 \address{[Address author1]}
@@ -67,7 +64,6 @@
 \author{[Name author2]}
 \address{[Address author2]}
 \email{[Email author2]}
-
 
 \date{[Date]}
 \keywords{%
@@ -85,31 +81,36 @@
 \begin{abstract}
     [Abstract text]
 \end{abstract}
-$\R$
 
-dawdawadw
-
-
-% \commentAuthorA{Test}
-\work{aaaa}
-
-\boxmain{Main box}{Highlight some result
-\begin{theorem}
-    \label{thm:main}
-    aaa
-\end{theorem}
+\boxmain{Purpose of this document}{
+    This document provides a LaTeX template, as well as a number of useful tools for
+    handling LaTeX projects.
 }
-\comment{aaa}
-\begin{theorem}
-    aaa
-\end{theorem}
 
-Theorem~\ref{thm:main}
-
+Overview of the LaTeX template.
 
 \begin{itemize}
-    \item Comment doesnt work, should be fixed later!
+    \item \texttt{preamble/symbols.sty} provides a list of common symbols.
+    \item \texttt{preamble/environments.sty} provides common environments.
+    \item \texttt{preamble/boxes.sty} provides box environments.
+        Not common in published articles, but useful when writing lecture notes.
+    \item \texttt{preamble/todos.sty} provides margin comments.
+        Useful in general but particularly useful when collaborating.
 \end{itemize}
+
+Overview of the other files.
+
+\begin{itemize}
+    \item \texttt{pytex\_zip.py} contains Python code to zip the tex document into a single file.
+    \item \texttt{pytex\_unzip.py} performs the reverse operation.
+    \item \texttt{tex-fmt.toml} provides configuration for running \texttt{tex-fmt --recursive},
+        which is useful for autoformatting the latex code.
+    \item \texttt{conventions.md} provides a location to verbally describe writing and
+        typesetting conventions within the project.
+\end{itemize}
+
+\work{Add functionality for custom titles}
+\work{Add a file for vscode snippets}
 
 \input{sections/01_introduction.tex}
 
