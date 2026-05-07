@@ -1,37 +1,62 @@
 \documentclass[twoside,reqno,11pt,dvipsnames]{amsart}
 \usepackage[a4paper,left=3cm,right=3cm,top=3cm,bottom=3cm]{geometry}
 
-% general typesetting
-\usepackage{xcolor}
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
-\usepackage{microtype}
-\usepackage{preamble/symbols}
-\usepackage{preamble/environments}
-\usepackage{enumitem}
-\usepackage{subcaption}
-\usepackage{booktabs}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% This block should not be modified (template)             %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                          %%
+% General typesetting                                      %%
+\usepackage{xcolor}                                        %%
+\usepackage[T1]{fontenc}                                   %%
+\usepackage[utf8]{inputenc}                                %%
+\usepackage{microtype}                                     %%
+\usepackage{preamble/symbols}                              %%
+\usepackage{preamble/environments}                         %%
+\usepackage{enumitem}                                      %%
+\usepackage{subcaption}                                    %%
+\usepackage{booktabs}                                      %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% This block should not be modified (template)             %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                          %%
+% Internal references                                      %%
+\usepackage{hyperref}                                      %%
+\definecolor{colorlinks}{RGB}{0, 24, 168}                  %%
+\definecolor{colorcites}{RGB}{124, 10, 2}                  %%
+\hypersetup{                                               %%
+    colorlinks=true,                                       %%
+    linkcolor=colorlinks,                                  %%
+    citecolor=colorcites,                                  %%
+    urlcolor=colorlinks,                                   %%
+    pdfborder={0 0 0}                                      %%
+}                                                          %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% This block should not be modified (template)             %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% internal references
-\usepackage{hyperref}
-\definecolor{colorlinks}{RGB}{0, 24, 168}
-\definecolor{colorcites}{RGB}{124, 10, 2}
-\hypersetup{
-    colorlinks=true,
-    linkcolor=colorlinks,
-    citecolor=colorcites,
-    urlcolor=colorlinks,
-    pdfborder={0 0 0}
-}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% This block is reserved for optional template elements    %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                          %%
+% Boxes                                                    %%
+\usepackage{preamble/boxes}                                %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                          %%
+% To-do notes                                              %%
+\usepackage{preamble/todos}                                %%
+\setlength{\marginparwidth}{2.5cm}                         %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                          %%
+% Headings                                                 %%
+\usepackage{preamble/headings}                             %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% This block is reserved for optional template elements    %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% boxes
-\usepackage{preamble/boxes}
-
-% todo notes
-\usepackage{preamble/todos}
-\setlength{\marginparwidth}{2.5cm}
-
-% biblatex
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                          %%
+% biblatex                                                 %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage[
     style=alphabetic,
     date=year,
@@ -49,6 +74,18 @@
     \clearfield{isbn}%
     \clearfield{issn}%
 }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                          %%
+% Custom commands                                          %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand\commentAuthorA[1]{\comment{AuthorA: #1}}
+\newcommand\commentAuthorB[1]{\comment{AuthorB: #1}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                          %%
+% Metadata (title, authors, etc.)                          %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \makeatletter
 \@namedef{subjclassname@2020}{\textup{2020} Mathematics Subject Classification}
@@ -71,16 +108,25 @@
     [keyword 2]
 }
 
-\newcommand\commentAuthorA[1]{\comment{AuthorA: #1}}
-\newcommand\commentAuthorB[1]{\comment{AuthorB: #1}}
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                          %%
+% Document body                                            %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                          %%
+% Abstract and title page                                  %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{abstract}
     [Abstract text]
 \end{abstract}
-
 \maketitle
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                          %%
+% Contents                                                 %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \boxmain{Purpose of this document}{
     This document provides a LaTeX template, as well as a number of useful tools for
@@ -96,6 +142,7 @@ Overview of the LaTeX template.
         Not common in published articles, but useful when writing lecture notes.
     \item \texttt{preamble/todos.sty} provides margin comments.
         Useful in general but particularly useful when collaborating.
+    \item \texttt{preamble/headings.sty} provides custom section heading styles.
 \end{itemize}
 
 Overview of the other files.
@@ -113,5 +160,11 @@ Overview of the other files.
 \work{Add functionality for custom titles}
 
 \input{sections/01_introduction.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                          %%
+% Bibliography                                             %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \printbibliography
+
 \end{document}

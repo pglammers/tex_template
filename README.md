@@ -23,6 +23,7 @@ should include both `latexmk` and `biber`.
 - `preamble/environments.sty` defines theorem-like environments.
 - `preamble/boxes.sty` defines reusable `tcolorbox` wrappers.
 - `preamble/todos.sty` defines margin-note commands for drafting.
+- `preamble/headings.sty` defines custom section heading styles.
 - `.vscode/latex.code-snippets` contains project snippets for VS Code.
 - `conventions.md` records writing and typesetting conventions.
 
