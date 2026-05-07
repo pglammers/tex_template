@@ -1,0 +1,24 @@
+\RequirePackage{tcolorbox}
+\tcbuselibrary{skins,breakable}
+\let\comment\tcbcomment
+
+\newcommand\boxmain[2]{
+    \begin{tcolorbox}[enhanced,breakable,colback=white, colframe=blue!50!black,title=#1]
+        #2
+    \end{tcolorbox}
+}
+\newcommand\boxingredient[2]{
+    \begin{tcolorbox}[enhanced,breakable,colback=white, colframe=green!50!black,title={#1}]
+        #2
+    \end{tcolorbox}
+}
+\newcommand\boxintermediate[2]{
+    \begin{tcolorbox}[enhanced,breakable,colback=white, colframe=red!50!black,title=#1]
+        #2
+    \end{tcolorbox}
+}
+\newcommand\boxhighlight[2]{
+    \begin{tcolorbox}[enhanced,breakable,colback=white, colframe=orange, title=#1, coltitle=black]
+        #2
+    \end{tcolorbox}
+}

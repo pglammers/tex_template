@@ -43,6 +43,9 @@
   \clearfield{issn}%
 }
 
+% boxes
+\usepackage{preamble/boxes}
+
 % todo notes
 \usepackage{preamble/todos}
 \setlength{\marginparwidth}{2.5cm}
@@ -84,8 +87,31 @@
 \end{abstract}
 $\R$
 
-\commentAuthorA{Test}
+dawdawadw
+
+
+% \commentAuthorA{Test}
 \work{aaaa}
+
+\boxmain{Main box}{Highlight some result
+\begin{theorem}
+    \label{thm:main}
+    aaa
+\end{theorem}
+}
+\comment{aaa}
+\begin{theorem}
+    aaa
+\end{theorem}
+
+Theorem~\ref{thm:main}
+
+
+\begin{itemize}
+    \item Comment doesnt work, should be fixed later!
+\end{itemize}
+
+\input{sections/01_introduction.tex}
 
 \printbibliography
 \end{document}
