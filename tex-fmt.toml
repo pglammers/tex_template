@@ -1,0 +1,15 @@
+check = false
+print = false
+fail-on-change = false
+wrap = true
+wraplen = 100
+wrapmin = 90
+tabsize = 4
+tabchar = "space"
+format-tables = true
+stdin = false
+lists = []
+verbatims = []
+no-indent-envs = []
+wrap-chars = []
+verbosity = "warn"

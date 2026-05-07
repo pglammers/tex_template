@@ -1,55 +1,40 @@
-\newcommand\blank{\,\cdot\,}
-\newcommand\ssubset{\Subset}
+\RequirePackage{amssymb,mathtools}
+\RequirePackage{dsfont}
+
+\newcommand\blank{\,\cdot\,} % for empty argument
 
 \newcommand\diam{\operatorname{diam}}
-\newcommand\Trace{\operatorname{Trace}}
+\newcommand\tr{\operatorname{tr}}
+\newcommand\dist{\operatorname{dist}}
+
 \newcommand\Var{\operatorname{Var}}
 \newcommand\Cov{\operatorname{Cov}}
-\newcommand\Distance{\operatorname{Distance}}
-\newcommand\TV{{\operatorname{TV}}}
-\newcommand\XY{{\operatorname{XY}}}
-\newcommand\ForKas{{\operatorname{FK}}}
-\newcommand\Ising{{\operatorname{Ising}}}
-\newcommand\f{\mathbf{f}}
-\renewcommand\i{\mathrm{i}}
-\newcommand\ghost{\mathfrak{g}}
+\newcommand\TV{\operatorname{TV}}
 
-\newcommand\ind[1]{\mathds{1}_{#1}}
-\newcommand\true[1]{\mathds{1}({#1})}
-\newcommand\diffi{{\,\mathrm{d}}}
+\newcommand\indicator[1]{\mathds{1}_{#1}}
+\newcommand\true[1]{\mathds{1}[{#1}]}
 \newcommand\diff{{\mathrm{d}}}
+\newcommand\diffi{{\,\mathrm{d}}} % for within integrals
 
-\newcommand\figleft{{\scshape{Left}}}
-\newcommand\figmiddle{{\scshape{Middle}}}
-\newcommand\figright{{\scshape{Right}}}
+% directions (eg. when referring to figures)
+\newcommand\Left{{\scshape{Left}}}
+\newcommand\Middle{{\scshape{Middle}}}
+\newcommand\Right{{\scshape{Right}}}
+\newcommand\Top{{\scshape{Top}}}
+\newcommand\Bottom{{\scshape{Bottom}}}
 
-\newcommand\A{\mathbb A}
-\newcommand\B{\mathbb B}
+% imaginary unit
+\newcommand\im{\mathrm{i}}
+
+% common blackboard letters without conflicts
 \newcommand\C{\mathbb C}
-\newcommand\D{\mathbb D}
 \newcommand\E{\mathbb E}
-\newcommand\F{\mathbb F}
-\newcommand\G{\mathbb G}
-\renewcommand\H{\mathbb H}
-\newcommand\I{\mathbb I}
-\newcommand\J{\mathbb J}
-\newcommand\K{\mathbb K}
-\renewcommand\L{\mathbb L}
-\newcommand\M{\mathbb M}
 \newcommand\N{\mathbb N}
-\renewcommand\O{\mathbb O}
-\renewcommand\P{\mathbb P}
 \newcommand\Q{\mathbb Q}
 \newcommand\R{\mathbb R}
-\renewcommand\S{\mathbb S}
-\newcommand\T{\mathbb T}
-\newcommand\U{\mathbb U}
-\newcommand\V{\mathbb V}
-\newcommand\W{\mathbb W}
-\newcommand\X{\mathbb X}
-\newcommand\Y{\mathbb Y}
 \newcommand\Z{\mathbb Z}
 
+% capital blackboard letters
 \newcommand\bbA{\mathbb A}
 \newcommand\bbB{\mathbb B}
 \newcommand\bbC{\mathbb C}
@@ -77,33 +62,63 @@
 \newcommand\bbY{\mathbb Y}
 \newcommand\bbZ{\mathbb Z}
 
-\newcommand\CA{\mathcal A}
-\newcommand\CB{\mathcal B}
-\newcommand\CC{\mathcal C}
-\newcommand\CD{\mathcal D}
-\newcommand\CE{\mathcal E}
-\newcommand\CF{\mathcal F}
-\newcommand\CG{\mathcal G}
-\newcommand\CH{\mathcal H}
-\newcommand\CI{\mathcal I}
-\newcommand\CJ{\mathcal J}
-\newcommand\CK{\mathcal K}
-\newcommand\CL{\mathcal L}
-\newcommand\CM{\mathcal M}
-\newcommand\CN{\mathcal N}
-\newcommand\CO{\mathcal O}
-\newcommand\CP{\mathcal P}
-\newcommand\CQ{\mathcal Q}
-\newcommand\CR{\mathcal R}
-\newcommand\CS{\mathcal S}
-\newcommand\CT{\mathcal T}
-\newcommand\CU{\mathcal U}
-\newcommand\CV{\mathcal V}
-\newcommand\CW{\mathcal W}
-\newcommand\CX{\mathcal X}
-\newcommand\CY{\mathcal Y}
-\newcommand\CZ{\mathcal Z}
+% lowercase bold letters
+\newcommand\bfa{\mathbf a}
+\newcommand\bfb{\mathbf b}
+\newcommand\bfc{\mathbf c}
+\newcommand\bfd{\mathbf d}
+\newcommand\bfe{\mathbf e}
+\newcommand\bff{\mathbf f}
+\newcommand\bfg{\mathbf g}
+\newcommand\bfh{\mathbf h}
+\newcommand\bfi{\mathbf i}
+\newcommand\bfj{\mathbf j}
+\newcommand\bfk{\mathbf k}
+\newcommand\bfl{\mathbf l}
+\newcommand\bfm{\mathbf m}
+\newcommand\bfn{\mathbf n}
+\newcommand\bfo{\mathbf o}
+\newcommand\bfp{\mathbf p}
+\newcommand\bfq{\mathbf q}
+\newcommand\bfr{\mathbf r}
+\newcommand\bfs{\mathbf s}
+\newcommand\bft{\mathbf t}
+\newcommand\bfu{\mathbf u}
+\newcommand\bfv{\mathbf v}
+\newcommand\bfw{\mathbf w}
+\newcommand\bfx{\mathbf x}
+\newcommand\bfy{\mathbf y}
+\newcommand\bfz{\mathbf z}
 
+% capital bold letters
+\newcommand\bfA{\mathbf A}
+\newcommand\bfB{\mathbf B}
+\newcommand\bfC{\mathbf C}
+\newcommand\bfD{\mathbf D}
+\newcommand\bfE{\mathbf E}
+\newcommand\bfF{\mathbf F}
+\newcommand\bfG{\mathbf G}
+\newcommand\bfH{\mathbf H}
+\newcommand\bfI{\mathbf I}
+\newcommand\bfJ{\mathbf J}
+\newcommand\bfK{\mathbf K}
+\newcommand\bfL{\mathbf L}
+\newcommand\bfM{\mathbf M}
+\newcommand\bfN{\mathbf N}
+\newcommand\bfO{\mathbf O}
+\newcommand\bfP{\mathbf P}
+\newcommand\bfQ{\mathbf Q}
+\newcommand\bfR{\mathbf R}
+\newcommand\bfS{\mathbf S}
+\newcommand\bfT{\mathbf T}
+\newcommand\bfU{\mathbf U}
+\newcommand\bfV{\mathbf V}
+\newcommand\bfW{\mathbf W}
+\newcommand\bfX{\mathbf X}
+\newcommand\bfY{\mathbf Y}
+\newcommand\bfZ{\mathbf Z}
+
+% capital calligraphic letters
 \newcommand\calA{\mathcal A}
 \newcommand\calB{\mathcal B}
 \newcommand\calC{\mathcal C}
@@ -131,60 +146,7 @@
 \newcommand\calY{\mathcal Y}
 \newcommand\calZ{\mathcal Z}
 
-\newcommand\FA{\mathfrak A}
-\newcommand\FB{\mathfrak B}
-\newcommand\FC{\mathfrak C}
-\newcommand\FD{\mathfrak D}
-\newcommand\FE{\mathfrak E}
-\newcommand\FF{\mathfrak F}
-\newcommand\FG{\mathfrak G}
-\newcommand\FH{\mathfrak H}
-\newcommand\FI{\mathfrak I}
-\newcommand\FJ{\mathfrak J}
-\newcommand\FK{\mathfrak K}
-\newcommand\FL{\mathfrak L}
-\newcommand\FM{\mathfrak M}
-\newcommand\FN{\mathfrak N}
-\newcommand\FO{\mathfrak O}
-\newcommand\FP{\mathfrak P}
-\newcommand\FQ{\mathfrak Q}
-\newcommand\FR{\mathfrak R}
-\newcommand\FS{\mathfrak S}
-\newcommand\FT{\mathfrak T}
-\newcommand\FU{\mathfrak U}
-\newcommand\FV{\mathfrak V}
-\newcommand\FW{\mathfrak W}
-\newcommand\FX{\mathfrak X}
-\newcommand\FY{\mathfrak Y}
-\newcommand\FZ{\mathfrak Z}
-
-\newcommand\Fa{\mathfrak a}
-\newcommand\Fb{\mathfrak b}
-\newcommand\Fc{\mathfrak c}
-\newcommand\Fd{\mathfrak d}
-\newcommand\Fe{\mathfrak e}
-\newcommand\Ff{\mathfrak f}
-\newcommand\Fg{\mathfrak g}
-\newcommand\Fh{\mathfrak h}
-\newcommand\Fi{\mathfrak i}
-\newcommand\Fj{\mathfrak j}
-\newcommand\Fk{\mathfrak k}
-\newcommand\Fl{\mathfrak l}
-\newcommand\Fm{\mathfrak m}
-\newcommand\Fn{\mathfrak n}
-\newcommand\Fo{\mathfrak o}
-\newcommand\Fp{\mathfrak p}
-\newcommand\Fq{\mathfrak q}
-\newcommand\Fr{\mathfrak r}
-\newcommand\Fs{\mathfrak s}
-\newcommand\Ft{\mathfrak t}
-\newcommand\Fu{\mathfrak u}
-\newcommand\Fv{\mathfrak v}
-\newcommand\Fw{\mathfrak w}
-\newcommand\Fx{\mathfrak x}
-\newcommand\Fy{\mathfrak y}
-\newcommand\Fz{\mathfrak z}
-
+% capital fraktur letters
 \newcommand\frakA{\mathfrak A}
 \newcommand\frakB{\mathfrak B}
 \newcommand\frakC{\mathfrak C}
@@ -212,6 +174,7 @@
 \newcommand\frakY{\mathfrak Y}
 \newcommand\frakZ{\mathfrak Z}
 
+% lowercase fraktur letters
 \newcommand\fraka{\mathfrak a}
 \newcommand\frakb{\mathfrak b}
 \newcommand\frakc{\mathfrak c}
@@ -238,3 +201,11 @@
 \newcommand\frakx{\mathfrak x}
 \newcommand\fraky{\mathfrak y}
 \newcommand\frakz{\mathfrak z}
+
+% other symbols
+\let\dotlessi\i
+\let\hungariandoubleaccent\H
+\let\Lwithstroke\L
+\let\Owithslash\O
+\let\pilcrow\P
+\let\sectionsign\S
