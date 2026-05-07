@@ -17,6 +17,8 @@ should include both `latexmk` and `biber`.
 
 - `main.tex` is the root document.
 - `sections/` contains section files included from `main.tex`.
+- `figures/` is the recommended location for figures and other image assets.
+- `My Library.bib` contains the BibTeX/BibLaTeX bibliography entries.
 - `preamble/symbols.sty` defines common mathematical symbols.
 - `preamble/environments.sty` defines theorem-like environments.
 - `preamble/boxes.sty` defines reusable `tcolorbox` wrappers.

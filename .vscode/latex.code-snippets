@@ -83,6 +83,30 @@
     ],
     "description": "Gather environment with label"
   },
+  "Fraction": {
+    "scope": "latex,tex",
+    "prefix": "frac",
+    "body": [
+      "\\frac{$1}{$2}$0"
+    ],
+    "description": "Fraction"
+  },
+  "Text Fraction": {
+    "scope": "latex,tex",
+    "prefix": "tfrac",
+    "body": [
+      "\\tfrac{$1}{$2}$0"
+    ],
+    "description": "Text-style fraction"
+  },
+  "Integral": {
+    "scope": "latex,tex",
+    "prefix": "int",
+    "body": [
+      "\\int_{$1} $2 \\diffi $3$0"
+    ],
+    "description": "Integral using diffi"
+  },
   "Theorem": {
     "scope": "latex,tex",
     "prefix": "thm",
