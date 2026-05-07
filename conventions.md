@@ -1,6 +1,6 @@
 # Project conventions
 ## Language
-UK English (United Kindom)
+UK English (United Kingdom)
 ## References to internal objects
 Always use the reference word, then a tilde, then the number.
 Examples:
@@ -12,5 +12,5 @@ For equations, always use the word ``Equation''.
 When working with a measure, always use square brackets, and use explicit set
 notation for the measure of a set. Examples:
 * $\bbP[\{X=1\}]$ when $X$ is a random variable,
-* $\E[X]$ for the expecation of some random variable $X$,
+* $\E[X]$ for the expectation of some random variable $X$,
 * $\bbP[A]$ for the probability of some event $A$.

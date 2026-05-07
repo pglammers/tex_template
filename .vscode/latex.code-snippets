@@ -19,5 +19,156 @@
       "\\end{equation}"
     ],
     "description": "Equation environment with label"
+  },
+  "Multline": {
+    "scope": "latex,tex",
+    "prefix": "mult",
+    "body": [
+      "\\begin{multline}",
+      "\t$0",
+      "\\end{multline}"
+    ],
+    "description": "Multline environment"
+  },
+  "Multline with label": {
+    "scope": "latex,tex",
+    "prefix": "multl",
+    "body": [
+      "\\begin{multline}",
+      "\t\\label{eq:$1}",
+      "\t$0",
+      "\\end{multline}"
+    ],
+    "description": "Multline environment with label"
+  },
+  "Align": {
+    "scope": "latex,tex",
+    "prefix": "align",
+    "body": [
+      "\\begin{align}",
+      "\t$0",
+      "\\end{align}"
+    ],
+    "description": "Align environment"
+  },
+  "Align with label": {
+    "scope": "latex,tex",
+    "prefix": "alignl",
+    "body": [
+      "\\begin{align}",
+      "\t\\label{eq:$1}",
+      "\t$0",
+      "\\end{align}"
+    ],
+    "description": "Align environment with label"
+  },
+  "Gather": {
+    "scope": "latex,tex",
+    "prefix": "gath",
+    "body": [
+      "\\begin{gather}",
+      "\t$0",
+      "\\end{gather}"
+    ],
+    "description": "Gather environment"
+  },
+  "Gather with label": {
+    "scope": "latex,tex",
+    "prefix": "gathl",
+    "body": [
+      "\\begin{gather}",
+      "\t\\label{eq:$1}",
+      "\t$0",
+      "\\end{gather}"
+    ],
+    "description": "Gather environment with label"
+  },
+  "Theorem": {
+    "scope": "latex,tex",
+    "prefix": "thm",
+    "body": [
+      "\\begin{theorem}",
+      "\t\\label{thm:$1}",
+      "\t$0",
+      "\\end{theorem}"
+    ],
+    "description": "Theorem environment with label"
+  },
+  "Lemma": {
+    "scope": "latex,tex",
+    "prefix": "lem",
+    "body": [
+      "\\begin{lemma}",
+      "\t\\label{lem:$1}",
+      "\t$0",
+      "\\end{lemma}"
+    ],
+    "description": "Lemma environment with label"
+  },
+  "Remark": {
+    "scope": "latex,tex",
+    "prefix": "remark",
+    "body": [
+      "\\begin{remark}",
+      "\t\\label{rem:$1}",
+      "\t$0",
+      "\\end{remark}"
+    ],
+    "description": "Remark environment with label"
+  },
+  "Proposition": {
+    "scope": "latex,tex",
+    "prefix": "prop",
+    "body": [
+      "\\begin{proposition}",
+      "\t\\label{prop:$1}",
+      "\t$0",
+      "\\end{proposition}"
+    ],
+    "description": "Proposition environment with label"
+  },
+  "Definition": {
+    "scope": "latex,tex",
+    "prefix": "def",
+    "body": [
+      "\\begin{definition}",
+      "\t\\label{def:$1}",
+      "\t$0",
+      "\\end{definition}"
+    ],
+    "description": "Definition environment with label"
+  },
+  "Exercise": {
+    "scope": "latex,tex",
+    "prefix": "exe",
+    "body": [
+      "\\begin{exercise}",
+      "\t\\label{ex:$1}",
+      "\t$0",
+      "\\end{exercise}"
+    ],
+    "description": "Exercise environment with label"
+  },
+  "Claim": {
+    "scope": "latex,tex",
+    "prefix": "claim",
+    "body": [
+      "\\begin{claim}",
+      "\t\\label{claim:$1}",
+      "\t$0",
+      "\\end{claim}"
+    ],
+    "description": "Claim environment with label"
+  },
+  "Assertion": {
+    "scope": "latex,tex",
+    "prefix": "assert",
+    "body": [
+      "\\begin{assertion}",
+      "\t\\label{assert:$1}",
+      "\t$0",
+      "\\end{assertion}"
+    ],
+    "description": "Assertion environment with label"
   }
 }

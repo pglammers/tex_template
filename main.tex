@@ -76,11 +76,11 @@
 
 \begin{document}
 
-\maketitle
-
 \begin{abstract}
     [Abstract text]
 \end{abstract}
+
+\maketitle
 
 \boxmain{Purpose of this document}{
     This document provides a LaTeX template, as well as a number of useful tools for
@@ -101,6 +101,7 @@ Overview of the LaTeX template.
 Overview of the other files.
 
 \begin{itemize}
+    \item \texttt{.vscode/latex.code-snippets} provides snippets for vscode users.
     \item \texttt{pytex\_zip.py} contains Python code to zip the tex document into a single file.
     \item \texttt{pytex\_unzip.py} performs the reverse operation.
     \item \texttt{tex-fmt.toml} provides configuration for running \texttt{tex-fmt ----recursive},
@@ -110,9 +111,7 @@ Overview of the other files.
 \end{itemize}
 
 \work{Add functionality for custom titles}
-\work{Add a file for vscode snippets}
 
 \input{sections/01_introduction.tex}
-
 \printbibliography
 \end{document}
